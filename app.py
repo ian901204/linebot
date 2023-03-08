@@ -35,8 +35,7 @@ app = Flask(__name__)
 
 # LINE 聊天機器人的基本資料
 config = configparser.ConfigParser()
-config.read('config.ini')
-
+config.read('/opt/linebot/config.ini')
 line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
 handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
