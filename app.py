@@ -40,6 +40,9 @@ config.read('config.ini')
 line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
 handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
+@app.route('/')
+def index():
+    return 'Hello World'
 
 # 接收 LINE 的資訊
 @app.route("/callback", methods=['POST'])
