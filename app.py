@@ -41,7 +41,7 @@ handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
 @app.route('/')
 def index():
-    return 'Hello World'
+    return 'Hello World fuck'
 
 # 接收 LINE 的資訊
 @app.route("/callback", methods=['POST'])
