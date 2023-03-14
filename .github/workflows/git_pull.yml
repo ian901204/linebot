@@ -1,4 +1,4 @@
-name: PHP Composer
+name: git_pull
 
 on:
   push:
@@ -22,5 +22,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: | 
-          cd /var/www/slim_project
+          cd /opt/linebot
           git pull
