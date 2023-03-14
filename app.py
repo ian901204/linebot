@@ -226,6 +226,7 @@ def plot_stcok_chart(stock="0050"):
     picname = str(stock) 
     stock = str(stock)+".TW"
     df = yf.download(stock)
+    time.sleep(0.5)
     mpf.plot(df, type='candle', volume=True, title=stock, savefig=picname + '.png')
 
  #上傳至圖庫再抓下來
